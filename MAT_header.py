@@ -81,10 +81,8 @@ class Matrix:
             for j in range(cols):
                 array[i][j] = self.data[j][i]
 
-        self.data = array
+        return array
 
-    def addMat(self, other):
-        pass
 
 # Example usage
 matrix1 = Matrix(2, 2)  # Create a 2x2 matrix
