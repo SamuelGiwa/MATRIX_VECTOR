@@ -63,19 +63,25 @@ class Matrix:
         for i in range(self.row):
             for j in range(self.col):
                 for k in range(self.col):
-                    self.temp[i][j] = self.data[i][k]+other.data[i][k]
+                    self.temp[i][j] = self.data[i][k]-other.data[i][k]
 
                 
 
-
-    
-
-
-        
-        
-
     def transpose(self):
-        pass
+        rows, cols = self.row, self.col
+        array = []
+        for i in range(rows):
+            row = []
+            for j in range(cols):
+                row.append(0)
+            array.append(row)
+        self.temp = array
+
+        for i in range(rows):
+            for j in range(cols):
+                array[i][j] = self.data[j][i]
+
+        self.data = array
 
     def addMat(self, other):
         pass
