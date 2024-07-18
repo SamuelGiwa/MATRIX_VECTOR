@@ -82,12 +82,3 @@ class Matrix:
                 array[i][j] = self.data[j][i]
 
         return array
-
-
-# Example usage
-matrix1 = Matrix(2, 2)  # Create a 2x2 matrix
-matrix2 = Matrix(2, 2)
-
-matrix1.matProduct(matrix2)
-z = matrix1.temp
-print(z)
