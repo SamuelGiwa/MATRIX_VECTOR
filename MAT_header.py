@@ -21,19 +21,18 @@ class Matrix:
             print(row)
 
     def matProduct(self, other):
-        rows, cols = self.row, other.col
-        array = []
-        for i in range(rows):
-            row = []
-            for j in range(cols):
-                row.append(0)
-            array.append(row)
-        self.temp = array
+
+        if self.row != self.column:
+            print("Matrix multiplication not possible; dimension mismatch")
+            return
+        result = [[0 for _ in range(self.row)] for _ in range(self.column)]
+
 
         for i in range(self.row):
             for j in range(self.col):
                 for k in range(self.col):
-                    self.temp[i][j] += self.data[k][j]*other.data[i][k]
+                    result[i][j] += self.data[k][j]*other.data[i][k]
+        return result
 
     def matAdd(self,other):
         rows, cols = self.row, other.col
@@ -82,3 +81,22 @@ class Matrix:
                 array[i][j] = self.data[j][i]
 
         return array
+    
+    def determinant(self):
+        if self.row != self.col:
+            print("Determinant is only defined for symmetrical matrix")
+            return
+
+        def _determinant(matrix):
+            # Base case for 2x2 matrix
+            if len(matrix) == 2:
+                return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+
+            # Recursive case for larger matrices
+            determinant = 0
+            for c in range(len(matrix)):
+                minor = [row[:c] + row[c+1:] for row in (matrix[:0] + matrix[1:])]
+                determinant += ((-1)**c) * matrix[0][c] * _determinant(minor)
+            return determinant
+
+        return _determinant(self.data)
