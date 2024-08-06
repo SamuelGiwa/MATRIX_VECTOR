@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index2.js" defer></script>
+    <title>Vector Algebra Visualization</title>
+</head>
+<body>
+    <h1>Vector Algebra Visualization</h1>
+    <canvas id="vectorCanvas" width="600" height="400"></canvas>
+    <div class="controls">
+        <input type="number" id="vec1x" placeholder="Vector 1 X" step="0.1">
+        <input type="number" id="vec1y" placeholder="Vector 1 Y" step="0.1">
+        <input type="number" id="vec2x" placeholder="Vector 2 X" step="0.1">
+        <input type="number" id="vec2y" placeholder="Vector 2 Y" step="0.1">
+        <button onclick="drawVectors()">Draw Vectors</button>
+    </div>
+    <div class="controls">
+        <input type="number" id="T11" placeholder="X 1 1" step="0.1">
+        <input type="number" id="T12" placeholder="X 1 2" step="0.1">
+        <input type="number" id="T21" placeholder="X 2 1" step="0.1">
+        <input type="number" id="T22" placeholder="X 2 2" step="0.1">
+        <button onclick="transform_vector()">Transform Vectors</button>
+    </div>
+</body>
+</html>
