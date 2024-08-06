@@ -19,7 +19,7 @@ This project is a simple web-based application that visualizes operations on  ve
 ## Project Structure
 
 ```plaintext
-vector-transformation-visualization/
+VECTOR_ALG/
 │
 ├── index.html        # Main HTML file
 ├── styles.css        # CSS file for styling
