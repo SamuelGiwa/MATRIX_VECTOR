@@ -26,4 +26,4 @@ vector-transformation-visualization/
 └── script.js         # JavaScript file with drawing and transformation logic
 
 Author: Samuel Boluwatife Giwa
-Contact: [Samuelgiwa41@example.com]
+Contact: Samuelgiwa41@gmail.com
